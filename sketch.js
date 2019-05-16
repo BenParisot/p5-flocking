@@ -4,10 +4,8 @@ let flock;
 let canvas;
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
-//  canvas.parent('body');
-//  canvas.position(0, 0);
-  createP("Drag the mouse to generate new boids.");
+  canvas = createCanvas(innerWidth, innerHeight);
+ canvas.parent('canvas');
 
   flock = new Flock();
   // Add an initial set of boids into the system
@@ -119,15 +117,15 @@ Boid.prototype.seek = function(target) {
 Boid.prototype.render = function() {
   // Draw a triangle rotated in the direction of velocity
   let theta = this.velocity.heading() + radians(90);
-  fill(237, 75, 111);
+  fill(247, 205, 214);
   stroke(240, 234, 73, .3);
   push();
   translate(this.position.x, this.position.y);
   rotate(theta);
   beginShape();
-  vertex(0, -this.r * 2);
-  vertex(-this.r, this.r * 2);
-  vertex(this.r, this.r * 2);
+  vertex(0, -this.r * 1.5);
+  vertex(-this.r, this.r * 1.5);
+  vertex(this.r, this.r * 1);
   endShape(CLOSE);
   pop();
 }
