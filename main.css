@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Katahdin', 'Arvo', 'Arvo-Italic';
+    src:  url('fonts/Katahdin Bold.otf') format('otf'),
+          url('fonts/Arvo-Regular.ttf') format('tff'),
+          url('fonts/Arvo-Italic.ttf') format('tff');
+}
+
 body {
     width: 100%;
 }
@@ -17,13 +24,15 @@ header {
     justify-content: space-between;
     height: 125px;
     background-color: rgba(240, 77, 77, .83);
-    padding: 15px 25px;
+    padding: 5px 25px 15px 25px;
 }
 
 #header-description {
     display: flex;
     flex-direction: column;
     width: 250px;
+    font-family: 'Arvo';
+    margin-top: 10px;
 }
 
 #header-description p {
@@ -44,4 +53,36 @@ main {
 
 #side-menu {
     border-top: 5px solid #f26639;
+    font-family: 'Katahdin';
+    font-size: 16px;
+    color: #ed4b64;
+}
+
+#side-menu ul {
+    padding-left: 0px;
+}
+
+#side-menu li {
+    list-style: none;
+    line-height: 2;
+}
+
+#splash-area {
+    margin-left: 65px;
+}
+
+#splash-area h1 {
+    font-family: 'Katahdin';
+    font-size: 42px;
+    margin-top: 0px;
+    color: #ed4b64;
+}
+
+#splash-area button {
+    border: 1px solid #f04d4d;
+    padding: 10px 15px;
+    background-color: #f0ea49;
+    font-size: 18px;
+    color: #f04d4d;
+    font-family: 'Arvo-Italic';
 }
