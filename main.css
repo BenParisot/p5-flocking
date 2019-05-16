@@ -1,13 +1,35 @@
+body {
+    width: 100%;
+}
+
 #canvas {
     position: absolute;
     left: 0px;
     top: 0px;
     z-index: -1;
     height: 100%;
+    width: 100%;
 }
 
 header {
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 125px;
+    background-color: #f26639;
+    padding: 15px 25px;
+}
+
+#header-description {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#header-description p {
+    text-align: right;
+    color: #f0ea49;
+    font-size: 18px;
 }
 
 header img {
